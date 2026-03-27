@@ -1,0 +1,31 @@
+# Delphi build outputs
+Win32/
+Win64/
+__history/
+__recovery/
+
+# Compiled binaries and intermediate files
+*.dcu
+*.exe
+*.dll
+*.bpl
+*.dcp
+*.so
+*.apk
+*.map
+*.drc
+*.rsm
+*.tds
+*.obj
+*.o
+*.ppu
+
+# IDE/local machine files
+*.identcache
+*.local
+*.stat
+*.dsk
+*.tvsconfig
+
+# Backup files
+*.~*

@@ -176,8 +176,7 @@ var
   Ini: TIniFile;
   i: Integer;
 begin
-  Ini := TIniFile.Create(ExtractFilePath(Application.ExeName) +
-    'receiptTest.ini');
+  Ini := TIniFile.Create(ChangeFileExt(Application.ExeName, '.ini'));
   try
     // Save Edit fields
     Ini.WriteString('Fields', 'Edit1', Edit1.Text);
@@ -224,7 +223,7 @@ var
   Line: string;
   Parts: TArray<string>;
 begin
-  IniPath := ExtractFilePath(Application.ExeName) + 'receiptTest.ini';
+  IniPath := ChangeFileExt(Application.ExeName, '.ini');
   if not FileExists(IniPath) then
   begin
     // No INI file — initialize with default items
@@ -303,7 +302,7 @@ end;
 procedure TForm1.BtnSaveClick(Sender: TObject);
 begin
   SaveSettings;
-  ShowMessage('설정이 저장되었습니다.');
+  ShowMessage('저장 완료: ' + ChangeFileExt(Application.ExeName, '.ini'));
 end;
 
 // ============================================================

@@ -122,8 +122,11 @@ var
   end;
 
   procedure PrintDivider;
+  var
+    CharCount: Integer;
   begin
-    PrintLine('================================');
+    CharCount := RECEIPT_WIDTH div Printer.Canvas.TextWidth('=');
+    PrintLine(StringOfChar('=', CharCount));
   end;
 
   procedure PrintBlankLine;
